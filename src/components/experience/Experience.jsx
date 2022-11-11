@@ -1,7 +1,6 @@
 import React from "react";
 import "./experience.css";
 import { BsPatchCheckFill } from "react-icons/bs";
-import TabelaTI from "../../assets/TI.pdf";
 
 const Experience = () => {
   const dataFrontEnd = [
