@@ -3,7 +3,7 @@ import { resolve } from 'path';
 
 const app  = express();
 
-app.set('/',
+app.use('/',
   resolve(
     __dirname,
     './build'
