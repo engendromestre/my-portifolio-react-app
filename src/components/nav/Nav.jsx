@@ -8,11 +8,11 @@ import { RiServiceLine } from "react-icons/ri";
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
-  const gaEventTracker = useAnalyticsEventTracker("#contact");
+  const gaEventTracker = useAnalyticsEventTracker("#");
 
-  const getActiveNav = (section) => {
-    gaEventTracker(section);
-    setActiveNav(section);
+  const getActiveNav = (_category,_action,_label) => {
+    gaEventTracker(_category);
+    setActiveNav(_category);
   };
 
   useEffect(() => {
@@ -24,35 +24,35 @@ const Nav = () => {
     <nav>
       <a
         href="#"
-        onClick={() => getActiveNav("#")}
+        onClick={() => getActiveNav("#","Home","Home Section")}
         className={activeNav === "#" ? "active" : ""}
       >
         <AiOutlineHome />
       </a>
       <a
         href="#about"
-        onClick={() => getActiveNav("#about")}
+        onClick={() => getActiveNav("#about","About","About Section")}
         className={activeNav === "#about" ? "active" : ""}
       >
         <AiOutlineUser />
       </a>
       <a
         href="#experience"
-        onClick={() => getActiveNav("#experience")}
+        onClick={() => getActiveNav("#experience","Experience","Experience Section")}
         className={activeNav === "#experience" ? "active" : ""}
       >
         <BiBookBookmark />
       </a>
       <a
         href="#services"
-        onClick={() => getActiveNav("#services")}
+        onClick={() => getActiveNav("#services","Services","Services Section")}
         className={activeNav === "#services" ? "active" : ""}
       >
         <RiServiceLine />
       </a>
       <a
         href="#contact"
-        onClick={() => getActiveNav("#contact")}
+        onClick={() => getActiveNav("#contact","Contact","Contact Section")}
         className={activeNav === "#contact" ? "active" : ""}
       >
         <AiOutlineMessage />
