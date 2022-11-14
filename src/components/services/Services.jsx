@@ -4,58 +4,64 @@ import { BsCheck2 } from "react-icons/bs";
 
 const data = [
   {
-    id: 1,
+    id: 11,
     avatar: BsCheck2,
     label: "Blog",
     type: "web development"
   },
   {
-    id: 2,
+    id: 12,
     avatar: BsCheck2,
     label: "Site Vitrine",
     type: "web development"
   },
   {
-    id: 3,
+    id: 13,
     avatar: BsCheck2,
     label: "Site Vitrine + Blog",
     type: "web development"
   },
   {
-    id: 4,
+    id: 14,
     avatar: BsCheck2,
     label: "Sistema Gerencial",
     type: "web development"
   },
   {
-    id: 5,
+    id: 15,
     avatar: BsCheck2,
     label: "Plataforma WEB",
     type: "web development"
   },
   {
-    id: 6,
+    id: 16,
     avatar: BsCheck2,
     label: "Tarefas (Funcionalidades)",
     type: "web development"
   },
   {
-    id: 7,
+    id: 21,
     avatar: BsCheck2,
-    label: "Formatação Avulsa",
-    type: "computer maintenance"
+    label: "De onde vem os seus visitantes?",
+    type: "google_analytics"
   },
   {
-    id: 8,
+    id: 22,
     avatar: BsCheck2,
-    label: "Instalação de Programas",
-    type: "computer maintenance"
+    label: "Quais são as páginas mais visualizadas?",
+    type: "google_analytics"
   },
   {
-    id: 9,
+    id: 23,
     avatar: BsCheck2,
-    label: "Otimização de Computadores",
-    type: "computer maintenance"
+    label: "O que as pessoas fazem no site?",
+    type: "google_analytics"
+  },
+  {
+    id: 24,
+    avatar: BsCheck2,
+    label: "Como está a eficiência das landing pages?",
+    type: "google_analytics"
   },
   {
     id: 10,
@@ -131,13 +137,13 @@ const Services = () => {
 
         <article className="service">
           <div className="service__head">
-            <h3>Montagem e Manutenção</h3>
+            <h3>Google Analytics</h3>
           </div>
 
           <ul className="service__list">
             { data.map(({ id, avatar, label, type }) => {
                 const Icon = avatar;
-                return ( type === "computer maintenance" ?
+                return ( type === "google_analytics" ?
                   <li key={id}>
                     <Icon className="service__list-icon" />
                     <p>{ label }</p>

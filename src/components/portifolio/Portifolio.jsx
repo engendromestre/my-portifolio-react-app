@@ -8,24 +8,17 @@ const data = [
   {
     id: 1,
     image: IMG1,
-    title: "Dashboard & Financial Visualization",
-    github: "https://gitbub.com",
+    title: "Calendário Pleiadiano",
+    github: "https://github.com/engendromestre/calendariopleiadiano-app",
     demo: "https://dribbble.com/shots/",
   },
   {
     id: 2,
     image: IMG2,
-    title: "Chart templates & ideographic in Figma",
+    title: "Repositório Acadêmico Galileu Botucatu",
     github: "https://gitbub.com",
     demo: "https://dribbble.com/shots/",
-  },
-  {
-    id: 3,
-    image: IMG3,
-    title: "Figma Dashboard",
-    github: "https://gitbub.com",
-    demo: "https://dribbble.com/shots/",
-  },
+  }
 ];
 
 const Portifolio = () => {
