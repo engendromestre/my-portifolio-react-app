@@ -1,4 +1,5 @@
 import React from "react";
+import ReactGA from "react-ga";
 import Header from "./components/header/Header";
 import Nav from "./components/nav/Nav";
 import About from "./components/about/About";
@@ -9,7 +10,10 @@ import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 
-const App = () => {
+const TRACKING_ID = 'G-EMBWT14QDV';
+ReactGA.initialize(TRACKING_ID);
+
+function App() {
 
   return (
     <>
@@ -24,6 +28,6 @@ const App = () => {
       <Footer />
     </>
   );
-};
+}
 
 export default App;

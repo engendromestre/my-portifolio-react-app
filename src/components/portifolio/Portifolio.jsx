@@ -2,7 +2,6 @@ import React from "react";
 import "./portifolio.css";
 import IMG1 from "../../assets/portifolio_1.jpg";
 import IMG2 from "../../assets/portifolio_2.jpg";
-import IMG3 from "../../assets/portifolio_3.jpg";
 
 const data = [
   {
