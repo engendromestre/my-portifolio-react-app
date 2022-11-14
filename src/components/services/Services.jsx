@@ -70,6 +70,12 @@ const data = [
     type: "google_analytics"
   },
   {
+    id: 26,
+    avatar: BsCheck2,
+    label: "Quais segmentos de clientes são mais lucrativos?",
+    type: "google_analytics"
+  },
+  {
     id: 10,
     avatar: BsCheck2,
     label: "Pagina de mídias Sociais",
