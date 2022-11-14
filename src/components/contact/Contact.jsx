@@ -69,7 +69,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  Send a message
+                  Enviar Mensagem
                 </a>
               </article>
             );
@@ -79,10 +79,10 @@ const Contact = () => {
           <input
             type="text"
             name="name"
-            placeholder="Your Full Name"
+            placeholder="Nome Completo"
             required
           />
-          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="email" name="email" placeholder="E-mail" required />
           <textarea
             name="message"
             rows="7"
@@ -90,7 +90,7 @@ const Contact = () => {
             required
           ></textarea>
           <button type="submit" className="btn btn-primary">
-            Send Message
+            Enviar Mensagem
           </button>
         </form>
       </div>
