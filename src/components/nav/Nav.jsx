@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState, useEffect } from "react";
-import useAnalyticsEventTracker from "./api/useAnalyticsEventTracker";
+import useAnalyticsEventTracker from "../api/useAnalyticsEventTracker";
 import "./nav.css";
 import { AiOutlineHome, AiOutlineUser, AiOutlineMessage } from "react-icons/ai";
 import { BiBookBookmark } from "react-icons/bi";
