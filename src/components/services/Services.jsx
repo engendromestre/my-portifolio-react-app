@@ -64,6 +64,12 @@ const data = [
     type: "google_analytics"
   },
   {
+    id: 25,
+    avatar: BsCheck2,
+    label: "Quais palavras-chave pagas deram mais conversões?",
+    type: "google_analytics"
+  },
+  {
     id: 10,
     avatar: BsCheck2,
     label: "Pagina de mídias Sociais",
