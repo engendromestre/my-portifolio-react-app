@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
-import useAnalyticsEventTracker from "../../api/useAnalyticsEventTracker";
+import ReactGA from "react-ga";
 import "./nav.css";
 import { AiOutlineHome, AiOutlineUser, AiOutlineMessage } from "react-icons/ai";
 import { BiBookBookmark } from "react-icons/bi";
@@ -8,14 +8,13 @@ import { RiServiceLine } from "react-icons/ri";
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
-  const gaEventTracker = useAnalyticsEventTracker("#", "Home");
 
   return (
     <nav>
       <a
         href="#"
         onClick={() => {
-          gaEventTracker("#", "Home");
+          ReactGA.event({category:'PAGE_SECTIONS',action: 'CLICK_LINK', label: 'HOME' });
           setActiveNav("#");
         }}
         className={activeNav === "#" ? "active" : ""}
@@ -25,7 +24,7 @@ const Nav = () => {
       <a
         href="#about"
         onClick={() => {
-          gaEventTracker("#about", "About");
+          ReactGA.event({category:'PAGE_SECTIONS',action: 'CLICK_LINK', label: 'ABOUT' });
           setActiveNav("#about");
         }}
         className={activeNav === "#about" ? "active" : ""}
@@ -35,7 +34,7 @@ const Nav = () => {
       <a
         href="#experience"
         onClick={() => {
-          gaEventTracker("#experience", "Experience");
+          ReactGA.event({category:'PAGE_SECTIONS',action: 'CLICK_LINK', label: 'EXPERIENCE' });
           setActiveNav("#experience");
         }}
         className={activeNav === "#experience" ? "active" : ""}
@@ -45,8 +44,8 @@ const Nav = () => {
       <a
         href="#services"
         onClick={() => {
-          gaEventTracker("#services", "Services");
-          setActiveNav("#experience");
+          ReactGA.event({category:'PAGE_SECTIONS',action: 'CLICK_LINK', label: 'SERVICES' });
+          setActiveNav("#services");
         }}
         className={activeNav === "#services" ? "active" : ""}
       >
@@ -55,7 +54,7 @@ const Nav = () => {
       <a
         href="#contact"
         onClick={() => {
-          gaEventTracker("#contact", "Contact");
+          ReactGA.event({category:'PAGE_SECTIONS',action: 'CLICK_LINK', label: 'CONTACT' });
           setActiveNav("#contact");
         }}
         className={activeNav === "#contact" ? "active" : ""}
