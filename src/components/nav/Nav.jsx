@@ -8,7 +8,7 @@ import { RiServiceLine } from "react-icons/ri";
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
-  const gaEventTracker = useAnalyticsEventTracker("#");
+  const gaEventTracker = useAnalyticsEventTracker("#","Home","Home Section");
 
   const getActiveNav = (_category,_action,_label) => {
     gaEventTracker(_category,_action,_label);
