@@ -10,9 +10,9 @@ const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
   const gaEventTracker = useAnalyticsEventTracker("#","Home","Home Section");
 
-  const getActiveNav = (_category,_action,_label) => {
-    gaEventTracker(_category,_action,_label);
-    setActiveNav(_category);
+  const getActiveNav = (category,action,label) => {
+    gaEventTracker(category,action,label);
+    setActiveNav(category);
   };
 
   useEffect(() => {
