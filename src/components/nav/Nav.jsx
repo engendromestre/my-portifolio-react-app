@@ -15,8 +15,8 @@ const Nav = () => {
     setActiveNav(category);
   };
 
-  useEffect(() => {
-    getActiveNav();
+  useEffect((category,action) => {
+    getActiveNav(category,action);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
