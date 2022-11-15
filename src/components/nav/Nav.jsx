@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import useAnalyticsEventTracker from "../../api/useAnalyticsEventTracker";
 import "./nav.css";
 import { AiOutlineHome, AiOutlineUser, AiOutlineMessage } from "react-icons/ai";
@@ -8,46 +8,56 @@ import { RiServiceLine } from "react-icons/ri";
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
-  const gaEventTracker = useAnalyticsEventTracker("#","Home");
-
-  const getActiveNav = (category,action) => {
-    gaEventTracker(category,action);
-    setActiveNav(category);
-  };
+  const gaEventTracker = useAnalyticsEventTracker("#", "Home");
 
   return (
     <nav>
       <a
         href="#"
-        onClick={() => getActiveNav("#","Home")}
+        onClick={() => {
+          gaEventTracker("#", "Home");
+          setActiveNav("#");
+        }}
         className={activeNav === "#" ? "active" : ""}
       >
         <AiOutlineHome />
       </a>
       <a
         href="#about"
-        onClick={() => getActiveNav("#about","About")}
+        onClick={() => {
+          gaEventTracker("#about", "About");
+          setActiveNav("#about");
+        }}
         className={activeNav === "#about" ? "active" : ""}
       >
         <AiOutlineUser />
       </a>
       <a
         href="#experience"
-        onClick={() => getActiveNav("#experience","Experience")}
+        onClick={() => {
+          gaEventTracker("#experience", "Experience");
+          setActiveNav("#experience");
+        }}
         className={activeNav === "#experience" ? "active" : ""}
       >
         <BiBookBookmark />
       </a>
       <a
         href="#services"
-        onClick={() => getActiveNav("#services","Services")}
+        onClick={() => {
+          gaEventTracker("#services", "Services");
+          setActiveNav("#experience");
+        }}
         className={activeNav === "#services" ? "active" : ""}
       >
         <RiServiceLine />
       </a>
       <a
         href="#contact"
-        onClick={() => getActiveNav("#contact","Contact")}
+        onClick={() => {
+          gaEventTracker("#contact", "Contact");
+          setActiveNav("#contact");
+        }}
         className={activeNav === "#contact" ? "active" : ""}
       >
         <AiOutlineMessage />
