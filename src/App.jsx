@@ -10,8 +10,8 @@ import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 
-const TRACKING_ID = 'G-EMBWT14QDV';
-ReactGA.initialize(TRACKING_ID);
+ReactGA.initialize('G-EMBWT14QDV');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
 
