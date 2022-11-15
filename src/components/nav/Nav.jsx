@@ -10,8 +10,8 @@ const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
   const gaEventTracker = useAnalyticsEventTracker("#","Home","Home Section");
 
-  const getActiveNav = (category,action,label) => {
-    gaEventTracker(category,action,label);
+  const getActiveNav = (category,action) => {
+    gaEventTracker(category,action);
     setActiveNav(category);
   };
 
@@ -24,35 +24,35 @@ const Nav = () => {
     <nav>
       <a
         href="#"
-        onClick={() => getActiveNav("#","Home","Home Section")}
+        onClick={() => getActiveNav("#","Home")}
         className={activeNav === "#" ? "active" : ""}
       >
         <AiOutlineHome />
       </a>
       <a
         href="#about"
-        onClick={() => getActiveNav("#about","About","About Section")}
+        onClick={() => getActiveNav("#about","About")}
         className={activeNav === "#about" ? "active" : ""}
       >
         <AiOutlineUser />
       </a>
       <a
         href="#experience"
-        onClick={() => getActiveNav("#experience","Experience","Experience Section")}
+        onClick={() => getActiveNav("#experience","Experience")}
         className={activeNav === "#experience" ? "active" : ""}
       >
         <BiBookBookmark />
       </a>
       <a
         href="#services"
-        onClick={() => getActiveNav("#services","Services","Services Section")}
+        onClick={() => getActiveNav("#services","Services")}
         className={activeNav === "#services" ? "active" : ""}
       >
         <RiServiceLine />
       </a>
       <a
         href="#contact"
-        onClick={() => getActiveNav("#contact","Contact","Contact Section")}
+        onClick={() => getActiveNav("#contact","Contact")}
         className={activeNav === "#contact" ? "active" : ""}
       >
         <AiOutlineMessage />
