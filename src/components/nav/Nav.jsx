@@ -11,7 +11,7 @@ const Nav = () => {
   const gaEventTracker = useAnalyticsEventTracker("#");
 
   const getActiveNav = (_category,_action,_label) => {
-    gaEventTracker(_category);
+    gaEventTracker(_category,_action,_label);
     setActiveNav(_category);
   };
 
