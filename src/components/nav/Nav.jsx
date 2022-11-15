@@ -8,17 +8,12 @@ import { RiServiceLine } from "react-icons/ri";
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#");
-  const gaEventTracker = useAnalyticsEventTracker("#","Home","Home Section");
+  const gaEventTracker = useAnalyticsEventTracker("#","Home");
 
   const getActiveNav = (category,action) => {
     gaEventTracker(category,action);
     setActiveNav(category);
   };
-
-  useEffect((category,action) => {
-    getActiveNav(category,action);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
 
   return (
     <nav>
