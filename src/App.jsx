@@ -14,7 +14,6 @@ ReactGA.initialize("G-EMBWT14QDV", {
   debug: true,
   titleCase: false
 });
-ReactGA.pageview(window.location.pathname + window.location.search);
 
 function App() {
   return (
