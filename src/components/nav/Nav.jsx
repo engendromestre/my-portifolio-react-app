@@ -14,7 +14,11 @@ const Nav = () => {
       <a
         href="#"
         onClick={() => {
-          ReactGA.pageview('home');
+          ReactGA.event({
+            category: 'Section',
+            action: 'Change Section',
+            label: 'Home'
+          });
           setActiveNav("#");
         }}
         className={activeNav === "#" ? "active" : ""}
