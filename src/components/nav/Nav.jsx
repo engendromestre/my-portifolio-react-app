@@ -14,7 +14,7 @@ const Nav = () => {
       <a
         href="#"
         onClick={() => {
-          ReactGA.event({category:'PAGE_SECTIONS',action: 'CLICK_LINK', label: 'HOME' });
+          ReactGA.pageview('home');
           setActiveNav("#");
         }}
         className={activeNav === "#" ? "active" : ""}
@@ -24,7 +24,7 @@ const Nav = () => {
       <a
         href="#about"
         onClick={() => {
-          ReactGA.event({category:'PAGE_SECTIONS',action: 'CLICK_LINK', label: 'ABOUT' });
+          ReactGA.pageview('about');
           setActiveNav("#about");
         }}
         className={activeNav === "#about" ? "active" : ""}
@@ -34,7 +34,7 @@ const Nav = () => {
       <a
         href="#experience"
         onClick={() => {
-          ReactGA.event({category:'PAGE_SECTIONS',action: 'CLICK_LINK', label: 'EXPERIENCE' });
+          ReactGA.pageview('experience');
           setActiveNav("#experience");
         }}
         className={activeNav === "#experience" ? "active" : ""}
@@ -44,7 +44,7 @@ const Nav = () => {
       <a
         href="#services"
         onClick={() => {
-          ReactGA.event({category:'PAGE_SECTIONS',action: 'CLICK_LINK', label: 'SERVICES' });
+          ReactGA.pageview('services');
           setActiveNav("#services");
         }}
         className={activeNav === "#services" ? "active" : ""}
@@ -54,7 +54,7 @@ const Nav = () => {
       <a
         href="#contact"
         onClick={() => {
-          ReactGA.event({category:'PAGE_SECTIONS',action: 'CLICK_LINK', label: 'CONTACT' });
+          ReactGA.pageview('contact');
           setActiveNav("#contact");
         }}
         className={activeNav === "#contact" ? "active" : ""}

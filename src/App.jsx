@@ -10,10 +10,15 @@ import Testimonials from "./components/testimonials/Testimonials";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 
-ReactGA.initialize('G-EMBWT14QDV');
+ReactGA.initialize("G-EMBWT14QDV", {
+  debug: true,
+  titleCase: false,
+  gaOptions: {
+    userId: 'engendro.mestre',
+  },
+});
 
 function App() {
-
   return (
     <>
       <Header />
