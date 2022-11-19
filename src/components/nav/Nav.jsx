@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useState } from "react";
-import ReactGA from "react-ga";
+import ReactGA from "react-ga4";
 import "./nav.css";
 import { AiOutlineHome, AiOutlineUser, AiOutlineMessage } from "react-icons/ai";
 import { BiBookBookmark } from "react-icons/bi";
@@ -14,7 +14,7 @@ const Nav = () => {
       <a
         href="#"
         onClick={() => {
-          ReactGA.pageview('home');
+          ReactGA.send({ hitType: "pageview", page: "#" });
           setActiveNav("#");
         }}
         className={activeNav === "#" ? "active" : ""}
@@ -24,7 +24,7 @@ const Nav = () => {
       <a
         href="#about"
         onClick={() => {
-          ReactGA.pageview('about');
+          ReactGA.send({ hitType: "pageview", page: "#about" });
           setActiveNav("#about");
         }}
         className={activeNav === "#about" ? "active" : ""}
@@ -34,7 +34,7 @@ const Nav = () => {
       <a
         href="#experience"
         onClick={() => {
-          ReactGA.pageview('experience');
+          ReactGA.send({ hitType: "pageview", page: "#experience" });
           setActiveNav("#experience");
         }}
         className={activeNav === "#experience" ? "active" : ""}
@@ -44,7 +44,7 @@ const Nav = () => {
       <a
         href="#services"
         onClick={() => {
-          ReactGA.pageview('services');
+          ReactGA.send({ hitType: "pageview", page: "#services" });
           setActiveNav("#services");
         }}
         className={activeNav === "#services" ? "active" : ""}
@@ -54,7 +54,7 @@ const Nav = () => {
       <a
         href="#contact"
         onClick={() => {
-          ReactGA.pageview('contact');
+          ReactGA.send({ hitType: "pageview", page: "#contact" });
           setActiveNav("#contact");
         }}
         className={activeNav === "#contact" ? "active" : ""}
