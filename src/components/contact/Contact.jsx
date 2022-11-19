@@ -3,6 +3,7 @@ import "./contact.css";
 import { MdOutlineEmail } from "react-icons/md";
 import { RiMessengerLine } from "react-icons/ri";
 import emailjs from "@emailjs/browser";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const data = [
   {
@@ -27,9 +28,11 @@ const data = [
 
 const Contact = () => {
   const form = useRef();
+  const recaptchaRef = React.createRef();
+
   const sendEmail = (e) => {
     e.preventDefault();
-
+    recaptchaRef.current.execute();
     emailjs
       .sendForm(
         "service_g3v3qen",
@@ -57,17 +60,13 @@ const Contact = () => {
       <div className="container contact__container">
         <div className="contact__options">
           {data.map(({ id, label, link, avatar }) => {
-            const Icon = avatar
+            const Icon = avatar;
             return (
               <article className="contact__option">
                 <Icon className="contact__option-icon" />
-                <h4>{ id }</h4>
-                <h5> { label } </h5>
-                <a
-                  href={ link }
-                  target="_blank"
-                  rel="noreferrer"
-                >
+                <h4>{id}</h4>
+                <h5> {label} </h5>
+                <a href={link} target="_blank" rel="noreferrer">
                   Enviar Mensagem
                 </a>
               </article>
@@ -75,12 +74,7 @@ const Contact = () => {
           })}
         </div>
         <form ref={form} onSubmit={sendEmail}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Nome Completo"
-            required
-          />
+          <input type="text" name="name" placeholder="Nome Completo" required />
           <input type="email" name="email" placeholder="E-mail" required />
           <textarea
             name="message"
@@ -91,6 +85,11 @@ const Contact = () => {
           <button type="submit" className="btn btn-primary">
             Enviar Mensagem
           </button>
+          <ReCAPTCHA
+            ref={recaptchaRef}
+            size="invisible"
+            sitekey="6LeZJh0jAAAAAGt4yKCygikfyDO3Az60wJn15HoQ"
+          />
         </form>
       </div>
     </section>
