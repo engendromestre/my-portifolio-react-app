@@ -12,10 +12,7 @@ import Footer from "./components/footer/Footer";
 
 ReactGA.initialize("G-EMBWT14QDV", {
   debug: true,
-  titleCase: false,
-  gaOptions: {
-    userId: 'engendro.mestre',
-  },
+  titleCase: false
 });
 
 function App() {
