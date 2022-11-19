@@ -14,11 +14,6 @@ const Nav = () => {
       <a
         href="#"
         onClick={() => {
-          ReactGA.event({
-            category: 'Section',
-            action: 'Change Section',
-            label: 'Home'
-          });
           setActiveNav("#");
         }}
         className={activeNav === "#" ? "active" : ""}
@@ -28,7 +23,6 @@ const Nav = () => {
       <a
         href="#about"
         onClick={() => {
-          ReactGA.pageview('about');
           setActiveNav("#about");
         }}
         className={activeNav === "#about" ? "active" : ""}
@@ -38,7 +32,6 @@ const Nav = () => {
       <a
         href="#experience"
         onClick={() => {
-          ReactGA.pageview('experience');
           setActiveNav("#experience");
         }}
         className={activeNav === "#experience" ? "active" : ""}
@@ -48,7 +41,6 @@ const Nav = () => {
       <a
         href="#services"
         onClick={() => {
-          ReactGA.pageview('services');
           setActiveNav("#services");
         }}
         className={activeNav === "#services" ? "active" : ""}
@@ -58,7 +50,6 @@ const Nav = () => {
       <a
         href="#contact"
         onClick={() => {
-          ReactGA.pageview('contact');
           setActiveNav("#contact");
         }}
         className={activeNav === "#contact" ? "active" : ""}
